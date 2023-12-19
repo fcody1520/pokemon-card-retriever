@@ -10,6 +10,14 @@ function App() {
 
   const [pokemonList, setPokemonList] = useState(theList)
 
+  function handleClick(){
+    setPokemonList([...pokemonList, 'MewTwo'])
+    
+
+  }
+
+
+
 
   return (
     <>
@@ -20,6 +28,8 @@ function App() {
             return <Card pokemon={ele}/>
           })
         }
+        <input type="text" />
+        <button onClick={handleClick}>Add pokemon</button>
       </div>
     </>
   )
