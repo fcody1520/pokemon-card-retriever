@@ -7,9 +7,9 @@ function App() {
     <>
       <div>
         <h1>Here are some pokemon!</h1>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card pokemon={'Pikachu'}/>
+        <Card pokemon={'Raichu'}/>
+        <Card pokemon={'Voltorb'}/>
       </div>
     </>
   )
