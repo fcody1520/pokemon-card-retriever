@@ -12,12 +12,6 @@ function App() {
   const [limit, setLimit] = useState('6')
   const [type, setType] = useState('electric')
 
-  function handleClick(){
-    setPokemonList([...pokemonList, 'MewTwo'])
-    
-
-  }
-
   function handleLimit(evt){
     setLimit(evt.target.value)
   }
