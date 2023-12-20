@@ -32,7 +32,19 @@ function App() {
     axios.get(`https://pokeapi.co/api/v2/type/${type}`)
     .then((response) => {
       // successfully logs a pokemon, the first of it's type
-      console.log(response.data.pokemon[0].pokemon.name)
+      // console.log(response.data.pokemon[0].pokemon.name)
+      let uglyPokeObjArr = response.data.pokemon
+      let prettyPokeStrArr = uglyPokeObjArr.map((pokeObj) => pokeObj.pokemon.name)
+      // let's cut down the arr length to be whatever the user input
+      if(+limit > 0){
+        let newPokeArr = prettyPokeStrArr.slice(0, +limit)
+        console.log(newPokeArr);
+      }else{
+        // if the user puts an invalid limit, then make the array empty
+        console.log([]);
+      }
+
+      // console.log(prettyPokeStrArr);
     })
     .catch((error) => {
       console.log(error);
